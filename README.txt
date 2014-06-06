@@ -1,5 +1,5 @@
 The (Out)Game Plan
-------------------
+==================
 
 MANAGER ACCOUNTS → EVENT CHECK IN → EVENT BRACKETING → EVENT SUMMARY
 
