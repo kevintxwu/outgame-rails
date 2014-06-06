@@ -81286,3 +81286,1233 @@ Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 11:52:32 -0700
 
 
 Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 11:52:32 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 80ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 12:02:04 -0700
+
+
+Started GET "/mockup-event-info" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+Processing by MockupController#info as HTML
+  Rendered mockup/info.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 12:02:06 -0700
+
+
+Started GET "/mockup-event-checkin" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+Processing by MockupController#checkin as HTML
+  Rendered mockup/checkin.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 12:02:07 -0700
+
+
+Started GET "/mockup-event-brackets" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+Processing by MockupController#brackets as HTML
+  Rendered mockup/brackets.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:09 -0700
+
+
+Started GET "/mockup-event-summary" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+Processing by MockupController#summary as HTML
+  Rendered mockup/summary.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:11 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 12:02:12 -0700
+
+
+Started GET "/mockup-new-event" for 127.0.0.1 at 2014-06-06 12:02:14 -0700
+Processing by MockupController#new as HTML
+  Rendered mockup/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:14 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:14 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:15 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 12:02:17 -0700
+
+
+Started GET "/mockup-login" for 127.0.0.1 at 2014-06-06 12:02:19 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:19 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 12:02:19 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:19 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 12:02:23 -0700
+
+
+Started GET "/template/new" for 127.0.0.1 at 2014-06-06 12:02:26 -0700
+Processing by TemplateController#new as HTML
+  Rendered template/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:26 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:26 -0700
+
+
+Started GET "/template/show" for 127.0.0.1 at 2014-06-06 12:02:28 -0700
+Processing by TemplateController#show as HTML
+  Rendered template/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:28 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:28 -0700
+
+
+Started GET "/assets/notification.svg" for 127.0.0.1 at 2014-06-06 12:02:28 -0700
+
+
+Started GET "/template/edit" for 127.0.0.1 at 2014-06-06 12:02:32 -0700
+Processing by TemplateController#edit as HTML
+  Rendered template/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:32 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:32 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 12:02:33 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:33 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 12:02:33 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:33 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 12:02:33 -0700
+
+
+Started GET "/mockup-login" for 127.0.0.1 at 2014-06-06 12:02:40 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 12:02:40 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 12:02:40 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 12:02:40 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 13:46:32 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 13:46:34 -0700
+
+
+Started GET "/mockup-new-event" for 127.0.0.1 at 2014-06-06 13:46:35 -0700
+Processing by MockupController#new as HTML
+  Rendered mockup/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:35 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:35 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:37 -0700
+
+
+Started GET "/mockup-event-info" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+Processing by MockupController#info as HTML
+  Rendered mockup/info.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 13:46:38 -0700
+
+
+Started GET "/mockup-event-checkin" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+Processing by MockupController#checkin as HTML
+  Rendered mockup/checkin.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 13:46:40 -0700
+
+
+Started GET "/mockup-event-brackets" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+Processing by MockupController#brackets as HTML
+  Rendered mockup/brackets.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 13:46:41 -0700
+
+
+Started GET "/mockup-event-summary" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+Processing by MockupController#summary as HTML
+  Rendered mockup/summary.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 13:46:43 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 13:46:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 14:15:20 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 14:15:23 -0700
+
+
+Started GET "/mockup-event-info" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+Processing by MockupController#info as HTML
+  Rendered mockup/info.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 14:15:24 -0700
+
+
+Started GET "/mockup-event-checkin" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+Processing by MockupController#checkin as HTML
+  Rendered mockup/checkin.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 14:15:26 -0700
+
+
+Started GET "/mockup-event-brackets" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+Processing by MockupController#brackets as HTML
+  Rendered mockup/brackets.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 14:15:27 -0700
+
+
+Started GET "/mockup-event-summary" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+Processing by MockupController#summary as HTML
+  Rendered mockup/summary.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-06 14:15:28 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:30 -0700
+
+
+Started GET "/mockup-login" for 127.0.0.1 at 2014-06-06 14:15:31 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:31 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:31 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 14:15:31 -0700
+
+
+Started GET "/mockup-events" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+Processing by MockupController#events as HTML
+  Rendered mockup/events.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-06 14:15:32 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:39 -0700
+
+
+Started GET "/template/new" for 127.0.0.1 at 2014-06-06 14:15:43 -0700
+Processing by TemplateController#new as HTML
+  Rendered template/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:43 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:43 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:15:46 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:46 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:46 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:46 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:46 -0700
+
+
+Started GET "/template/edit" for 127.0.0.1 at 2014-06-06 14:15:47 -0700
+Processing by TemplateController#edit as HTML
+  Rendered template/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:47 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:47 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:15:49 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:49 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:49 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:49 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:49 -0700
+
+
+Started GET "/template/new" for 127.0.0.1 at 2014-06-06 14:15:54 -0700
+Processing by TemplateController#new as HTML
+  Rendered template/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:54 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:54 -0700
+
+
+Started GET "/template/show" for 127.0.0.1 at 2014-06-06 14:15:55 -0700
+Processing by TemplateController#show as HTML
+  Rendered template/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:55 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:55 -0700
+
+
+Started GET "/assets/notification.svg" for 127.0.0.1 at 2014-06-06 14:15:55 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:15:58 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:15:58 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:58 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:15:58 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:15:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+Processing by MockupController#index as HTML
+  Rendered mockup/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/avatar.png" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:16:14 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:16:17 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:04 -0700
+
+
+Started GET "/template/new" for 127.0.0.1 at 2014-06-06 14:17:05 -0700
+Processing by TemplateController#new as HTML
+  Rendered template/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:05 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:05 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:17:08 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:08 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:08 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:08 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:08 -0700
+
+
+Started GET "/template/new" for 127.0.0.1 at 2014-06-06 14:17:09 -0700
+Processing by TemplateController#new as HTML
+  Rendered template/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:09 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:09 -0700
+
+
+Started GET "/template/show" for 127.0.0.1 at 2014-06-06 14:17:11 -0700
+Processing by TemplateController#show as HTML
+  Rendered template/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:11 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:11 -0700
+
+
+Started GET "/assets/notification.svg" for 127.0.0.1 at 2014-06-06 14:17:11 -0700
+
+
+Started GET "/template/edit" for 127.0.0.1 at 2014-06-06 14:17:15 -0700
+Processing by TemplateController#edit as HTML
+  Rendered template/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:15 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:15 -0700
+
+
+Started GET "/template" for 127.0.0.1 at 2014-06-06 14:17:16 -0700
+Processing by TemplateController#index as HTML
+  Rendered template/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-06 14:17:16 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-06 14:17:16 -0700
+
+
+Started GET "/assets/add-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:16 -0700
+
+
+Started GET "/assets/pen-alt.svg" for 127.0.0.1 at 2014-06-06 14:17:16 -0700
