@@ -3,6 +3,8 @@ The (Out)Game Plan
 
 Manager Accounts → Event Check In → Event Bracketing → Event Summary
 
+Before starting please review templates for the generic "index", "new", "show", and "edit" pages are in '/template'
+
 
 Module 1: Manager Accounts
 --------------------------

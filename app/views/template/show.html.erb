@@ -1,0 +1,36 @@
+<!-- GENERAL NOTIFICATION TEMPLATE -->
+<div class="action-notification">
+  <img src="<%= image_path('notification.svg') %>"/>
+  <span> You've successfully created a new event! </span>
+</div>
+<div class="action-notification-spacer"></div>
+<!-- SECTION -->
+
+<h1 class="notification"> Your <span class="orange"> Existing Something </span></h1>
+<div class="form">
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Name</td>
+      <td>Potato Event</td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Date</td>
+      <td>01/11/11</td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Type</td>
+      <td>Potato</td>
+    </tr>
+    <tr style="height: 150px">
+      <td style="width: 150px;">Description</td>
+      <td><textarea type="text" placeholder="Description" readonly>Yo!</textarea></td>
+    </tr>
+  </table>
+  <a href="/template/edit"><button>Edit</button></a>
+  <a href="/template"><button style="background: #db4435; margin-left: 15px;">Delete</button></a>
+  <a href="/template"><button style="background: #b3b3b3; margin-left: 15px;">Back</button></a>
+</div>

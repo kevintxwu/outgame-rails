@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'template/index', :path => 'template'
+  get 'template/new'
+  get 'template/show'
+  get 'template/edit'
+
   get 'mockup/index', :path => 'mockup-login'
   get 'mockup/new', :path => 'mockup-new-event'
   get 'mockup/events', :path => 'mockup-events'

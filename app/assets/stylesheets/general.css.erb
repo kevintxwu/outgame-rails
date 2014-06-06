@@ -174,6 +174,35 @@ nav img {
   height: 20px;
 }
 
+.action-notification {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  background: #ff7711;
+  opacity: 1;
+}
+
+.action-notification img {
+  position: relative;
+  top: 2px;
+  left: -5px;
+  height: 40px;
+}
+
+.action-notification span {
+  position: relative;
+  top: -12px;
+}
+
+.action-notification-spacer {
+  width: 100%;
+  height: 100px;
+}
+
 .notification {
   padding-top: 50px;
   padding-left: 10px;
@@ -472,6 +501,12 @@ table {
   cursor: pointer;
 }
 
+.form table button {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
 table tr th,
 table tr td {
   border-right: 1px solid #d3d3d3;
@@ -520,15 +555,12 @@ th {
 }
 
 th, td {
-  padding: 15px !important;
-}
-
-td {
+  padding: 15px !important; 
   position: relative;
   overflow: hidden;
 }
 
-td button {
+td button , th button {
   position: absolute;
   top: 0;
   left: 0;
@@ -537,7 +569,7 @@ td button {
   border: none;
 }
 
-td button img {
+td button img, th button img {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -545,12 +577,21 @@ td button img {
   height: 20px;
 }
 
-td button:hover {
+td button:hover, th button:hover {
   cursor: pointer;
 }
 
-td .add {
+td .add, th .add {
   background: #ff7711;
+}
+
+
+td .edit {
+  background: #b3b3b3;
+}
+
+td .edit:hover {
+  background: #0f9d58;
 }
 
 td .delete {
