@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  get 'mockup/index', :path => 'mockup-login'
+  get 'mockup/new', :path => 'mockup-new-event'
+  get 'mockup/events', :path => 'mockup-events'
+  get 'mockup/info', :path => 'mockup-event-info'
+  get 'mockup/checkin', :path => 'mockup-event-checkin'
+  get 'mockup/brackets', :path => 'mockup-event-brackets'
+  get 'mockup/summary', :path => 'mockup-event-summary'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'mockup#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
