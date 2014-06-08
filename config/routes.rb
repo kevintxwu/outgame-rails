@@ -1,18 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'events/index'
-
-  get 'events/create'
-
-  get 'events/show'
-
-  get 'events/new'
-
-  get 'events/update'
-
-  get 'events/destroy'
-
-  resources 'event'
+  resources 'events'
 
   get 'template/index', :path => 'template'
   get 'template/new'
