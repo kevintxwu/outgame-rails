@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources 'events'
+
   get 'template/index', :path => 'template'
   get 'template/new'
   get 'template/show'

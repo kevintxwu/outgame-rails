@@ -1,5 +1,6 @@
 <h1 class="notification"> Create A <span class="orange"> New Event </span></h1>
 <div class="form">
+<%=form_tag do %>
   <table>
     <tr>
       <th>Type</th>
@@ -40,4 +41,5 @@
   </table>
   <a href="/mockup-events"><button>Create Event</button></a>
   <a href="/mockup-events"><button style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
+<% end %>
 </div>
