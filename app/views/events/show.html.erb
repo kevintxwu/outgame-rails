@@ -1,0 +1,68 @@
+<h1 class="notification"> Non-elimination Tournament <span class="orange"> Information </span></h1>
+<div class="event-management">
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Name</td>
+      <td><input type="text" placeholder="Event Name" value="Non-elimination Tournament"/></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Date</td>
+      <td><input type="date" placeholder="Event Date" value="2014-09-22"></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Type</td>
+      <td>
+        <select>
+          <option value="net">Netrunner</option>
+          <option value="mtg">Magic The Gathering</option>
+          <option value="poke">Pokemon</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Bracket</td>
+      <td>
+        <select>
+          <option value="nonel">Non-elimination</option>
+        </select>
+      </td>
+    </tr>
+    <tr style="height: 150px">
+      <td style="width: 150px;">Description</td>
+      <td><textarea type="text" placeholder="Event Description">This is a tournament of 30 people and it will be really cool and fun! Trust me you'll like it.</textarea></td>
+    </tr>
+  </table>
+  <a href="/mockup-event-info"><button class="submit">Update Event</button></a>
+  <a href="/mockup-event-info"><button class="submit" style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
+</div>
+<div class="menu">
+  <div class="title"> Menu </div>
+  <a class="tab" href="/mockup-event-info">
+    <img src="<%= image_path('pen.svg') %>"/>
+    <span> Edit Info </span>
+  </a>
+  <a class="tab" href="/mockup-event-checkin"> 
+    <img src="<%= image_path('person.svg') %>"/>
+    <span> Check In </span>
+  </a>
+  <a class="tab" href="/mockup-event-brackets"> 
+    <img src="<%= image_path('trophy.svg') %>"/>
+    <span> Brackets </span>
+  </a>
+  <!--<a class="tab" href="#"> 
+    <img src="<%= image_path('money.svg') %>"/>
+    <span> Rewards </span>
+  </a>-->
+  <a class="tab" href="/mockup-event-summary">
+    <img src="<%= image_path('stats.svg') %>"/>
+    <span> Summary </span>
+  </a>
+  <a class="tab" href="/mockup-events"> 
+    <img src="<%= image_path('trash.svg') %>"/>
+    <span> Delete </span>
+  </a>
+</div>
