@@ -1,4 +1,5 @@
-<h1 class="notification"> <%=@event.name %> <span class="orange"> Information </span></h1>
+<h1 class="notification"><%=@event.name%><span class="orange"> Information </span></h1>
+<%= form_for @event do |f| %>
 <div class="event-management">
   <table>
     <tr>
@@ -7,29 +8,36 @@
     </tr>
     <tr>
       <td style="width: 150px;">Name</td>
-      <td><%=@event.name %></td>
+      <td><%= f.text_field :name %></td>
     </tr>
     <tr>
       <td style="width: 150px;">Date</td>
-      <td><%=@event.date %></td>
+      <td><%= f.text_field :date %></td>
     </tr>
     <tr>
-      <td style="width: 150px;">Event Type</td>
-      <td><%=@event.event_type %></td>
+      <td style="width: 150px;">Type</td>
+      <td>
+        <%=f.select :event_type, options_for_select(['Netrunner','Magic The Gathering','Pokemon'])%>
+      </td>
     </tr>
     <tr>
       <td style="width: 150px;">Bracket</td>
-      <td><%=@event.bracket %></td>
+      <td>
+        <%=f.select :bracket, options_for_select(%w[Non-Elimination])%>
+      </td>
     </tr>
     <tr style="height: 150px">
       <td style="width: 150px;">Description</td>
-      <td><%=@event.description %></td>
+      <td><textarea type="text" placeholder="Event Description"><%=f.text_field :description%></textarea></td>
     </tr>
   </table>
+<%= f.submit 'Update Event', :class => "submit"%>
+<% end%>
+  <a href=<%=event_path(@event)%>><button class="submit" style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
 </div>
 <div class="menu">
   <div class="title"> Menu </div>
-  <a class="tab" href=<%=edit_event_path(@event)%>>
+  <a class="tab" href="/mockup-event-info">
     <img src="<%= image_path('pen.svg') %>"/>
     <span> Edit Info </span>
   </a>
