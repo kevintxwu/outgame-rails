@@ -96393,3 +96393,71 @@ Processing by EventsController#edit as HTML
   [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
   Rendered events/edit.html.erb within layouts/application (4.9ms)
 Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-06-09 20:23:32 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (314.8ms)
+Completed 200 OK in 325ms (Views: 322.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-09 20:23:33 -0700

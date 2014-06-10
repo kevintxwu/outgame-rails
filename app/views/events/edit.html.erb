@@ -28,7 +28,7 @@
     </tr>
     <tr style="height: 150px">
       <td style="width: 150px;">Description</td>
-      <td><textarea type="text" placeholder="Event Description"><%=f.text_field :description%></textarea></td>
+      <td><%=f.text_area :description%></td>
     </tr>
   </table>
 <%= f.submit 'Update Event', :class => "submit"%>
