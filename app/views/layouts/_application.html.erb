@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Outgame</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="icon" type="image/png" href="<%= image_path('favicon.png') %>"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<nav>
+  <a class="tab" href="/mockup-new-event"><img src="<%= image_path('add.svg') %>"/></a>
+  <div class="divider"></div>
+  <a class="tab" href="/mockup-events"><img src="<%= image_path('list.svg') %>"/></a>
+  <div class="divider"></div>
+  <span> Welcome, <a class="link" href="/mockup-login"> Games of Berkeley </a></span>
+</nav>
+<%= yield %>
+</body>
+</html>
