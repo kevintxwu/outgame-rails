@@ -95489,3 +95489,907 @@ Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-08 21:43:17 -0700
 
 
 Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-08 21:43:17 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:13:40 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (32.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (227.0ms)
+Completed 500 Internal Server Error in 289ms
+
+ActionView::Template::Error (undefined method `short_string' for #<#<Class:0x00000005b96dd8>:0x00000005b95d20>):
+     5:   <img src="<%= image_path(event.image) %>"/>
+     6:   <h1> <%= event.name %> </h1>
+     7:   <p> <%= event.type %> </p>
+     8:   <p class="description"> <%= short_string(event.description) %> </p>
+     9:   <img class="date" src="<%= image_path('date.svg') %>"/><span> <%= event.date %> </span>
+    10:   <%= link_to "Manage", event_path(event) %>
+    11: </div>
+  app/views/events/index.html.erb:8:in `block in _app_views_events_index_html_erb___908478879868973963_48014860'
+  app/views/events/index.html.erb:3:in `_app_views_events_index_html_erb___908478879868973963_48014860'
+
+
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:13:54 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (74.9ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined method `short_string' for #<#<Class:0x00000005b96dd8>:0x000000055ce018>):
+     5:   <img src="<%= image_path(event.image) %>"/>
+     6:   <h1> <%= event.name %> </h1>
+     7:   <p> <%= event.type %> </p>
+     8:   <p class="description"> <%= short_string(event.description,20) %> </p>
+     9:   <img class="date" src="<%= image_path('date.svg') %>"/><span> <%= event.date %> </span>
+    10:   <%= link_to "Manage", event_path(event) %>
+    11: </div>
+  app/views/events/index.html.erb:8:in `block in _app_views_events_index_html_erb___908478879868973963_44834660'
+  app/views/events/index.html.erb:3:in `_app_views_events_index_html_erb___908478879868973963_44834660'
+
+
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:13:59 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (73.1ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (undefined method `short_string' for #<#<Class:0x00000005b96dd8>:0x0000000525cdf8>):
+     5:   <img src="<%= image_path(event.image) %>"/>
+     6:   <h1> <%= event.name %> </h1>
+     7:   <p> <%= event.type %> </p>
+     8:   <p class="description"> <%= short_string(event.description,20) %> </p>
+     9:   <img class="date" src="<%= image_path('date.svg') %>"/><span> <%= event.date %> </span>
+    10:   <%= link_to "Manage", event_path(event) %>
+    11: </div>
+  app/views/events/index.html.erb:8:in `block in _app_views_events_index_html_erb___908478879868973963_44834660'
+  app/views/events/index.html.erb:3:in `_app_views_events_index_html_erb___908478879868973963_44834660'
+
+
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:16:16 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `short_string' for #<EventsController:0x000000027bac58>):
+     5:   <img src="<%= image_path(event.image) %>"/>
+     6:   <h1> <%= event.name %> </h1>
+     7:   <p> <%= event.type %> </p>
+     8:   <p class="description"> <%= short_string(event.description,20) %> </p>
+     9:   <img class="date" src="<%= image_path('date.svg') %>"/><span> <%= event.date %> </span>
+    10:   <%= link_to "Manage", event_path(event) %>
+    11: </div>
+  app/views/events/index.html.erb:8:in `block in _app_views_events_index_html_erb___908478879868973963_44834660'
+  app/views/events/index.html.erb:3:in `_app_views_events_index_html_erb___908478879868973963_44834660'
+
+
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/parallels/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:17:03 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 152ms (Views: 147.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:17:04 -0700
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-09 20:17:15 -0700
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-06-09 20:17:19 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/events/1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U3A2Itvtp9nptA0DkFQXfYd+1Q8vU5Smex93mOzGbwU=", "event"=>{"name"=>"Non-Elimination Tournament", "date"=>"2014-0", "event_type"=>"Netrunner", "bracket"=>"Non-Elimination"}, "commit"=>"Update Event", "id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (28.8ms)[0m  UPDATE "events" SET "name" = ?, "updated_at" = ? WHERE "events"."id" = 1  [["name", "Non-Elimination Tournament"], ["updated_at", "2014-06-10 03:17:28.364313"]]
+  [1m[36m (23.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 174ms (ActiveRecord: 52.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:17:28 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:17:43 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:43 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:43 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:17:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:18:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:18:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:19:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:19:56 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:20:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:24 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:20:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:20:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:20:46 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/mockup.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/template.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/mockup.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/template.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/add.svg" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/list.svg" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/netrunner.jpg" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/date.svg" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/assets/mtg.jpg" for 127.0.0.1 at 2014-06-09 20:21:01 -0700
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/pen.svg" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+
+
+Started GET "/assets/person.svg" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+
+
+Started GET "/assets/stats.svg" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+
+
+Started GET "/assets/trash.svg" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+
+
+Started GET "/assets/trophy.svg" for 127.0.0.1 at 2014-06-09 20:21:17 -0700
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-06-09 20:21:21 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.1ms)

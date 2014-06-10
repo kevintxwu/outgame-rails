@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  helper_method :shorten_str
   def index
     @events = Event.all
   end
@@ -28,6 +29,10 @@ class EventsController < ApplicationController
   end
 
   def destroy
+  end
+  
+  def shorten_str(str,len)
+    str.length > len ? str[0..len] + '...' : str[0..-1] 
   end
 
 private
