@@ -5,6 +5,14 @@ class EventsController < ApplicationController
   end
 
   def create
+    @event = Event.new event_params
+    if @event.save
+      flash[:success] = 'Successfully created event!'
+      redirect_to events_path
+    else
+      render 'new'
+    end
+    
   end
 
   def show
@@ -16,6 +24,7 @@ class EventsController < ApplicationController
   end
 
   def new
+    @event = Event.new
   end
 
   def update
@@ -29,6 +38,8 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    Event.find(params[:id]).destroy
+    redirect_to events_path 
   end
   
   def shorten_str(str,len)

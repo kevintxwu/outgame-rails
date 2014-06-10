@@ -1,6 +1,6 @@
 <h1 class="notification"> Create A <span class="orange"> New Event </span></h1>
+<%= form_for @event do |f| %>
 <div class="form">
-<%=form_tag do %>
   <table>
     <tr>
       <th>Type</th>
@@ -8,38 +8,30 @@
     </tr>
     <tr>
       <td style="width: 150px;">Name</td>
-      <td><input type="text" placeholder="Event Name"/></td>
+      <td><%= f.text_field :name %></td>
     </tr>
     <tr>
       <td style="width: 150px;">Date</td>
-      <td><input type="date"></td>
+      <td><%= f.text_field :date %></td>
     </tr>
     <tr>
       <td style="width: 150px;">Type</td>
       <td>
-        <select placeholder="Event Type">
-          <option value="">Event Type</option>
-          <option value="net">Netrunner</option>
-          <option value="mtg">Magic The Gathering</option>
-          <option value="poke">Pokemon</option>
-        </select>
+        <%=f.select :event_type, options_for_select(['Netrunner','Magic The Gathering','Pokemon'])%>
       </td>
     </tr>
     <tr>
       <td style="width: 150px;">Bracket</td>
       <td>
-        <select>
-          <option value="">Bracket Type</option>
-          <option value="nonel">Non-elimination</option>
-        </select>
+        <%=f.select :bracket, options_for_select(%w[Non-Elimination])%>
       </td>
     </tr>
     <tr style="height: 150px">
       <td style="width: 150px;">Description</td>
-      <td><textarea type="text" placeholder="Event Description"></textarea></td>
+      <td><%=f.text_area :description%></td>
     </tr>
   </table>
-  <a href="/mockup-events"><button>Create Event</button></a>
-  <a href="/mockup-events"><button style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
+<%= f.submit 'Create Event', :class => "submit"%>
 <% end %>
+  <a href=<%= events_path%>><button style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
 </div>
