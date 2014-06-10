@@ -36,29 +36,9 @@
   <a href=<%=event_path(@event)%>><button class="submit" style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
 </div>
 <div class="menu">
-  <div class="title"> Menu </div>
-  <a class="tab" href="/mockup-event-info">
-    <img src="<%= image_path('pen.svg') %>"/>
-    <span> Edit Info </span>
-  </a>
-  <a class="tab" href="/mockup-event-checkin"> 
-    <img src="<%= image_path('person.svg') %>"/>
-    <span> Check In </span>
-  </a>
-  <a class="tab" href="/mockup-event-brackets"> 
-    <img src="<%= image_path('trophy.svg') %>"/>
-    <span> Brackets </span>
-  </a>
-  <!--<a class="tab" href="#"> 
-    <img src="<%= image_path('money.svg') %>"/>
-    <span> Rewards </span>
-  </a>-->
-  <a class="tab" href="/mockup-event-summary">
-    <img src="<%= image_path('stats.svg') %>"/>
-    <span> Summary </span>
-  </a>
-  <a class="tab" href="/mockup-events"> 
+  <a class="tab" href=<%=event_path(@event)%> data-confirm="Are you sure you want to delete this event?" data-method="delete"> 
     <img src="<%= image_path('trash.svg') %>"/>
     <span> Delete </span>
   </a>
+</div>
 </div>
