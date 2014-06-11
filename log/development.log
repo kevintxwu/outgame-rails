@@ -82709,3 +82709,13 @@ Migrating to AddPasswordDigestToUsers (20140608221402)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140608221402"]]
   [1m[36m (11.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (22.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('dasfas@fdas.com') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('dasfas@fdas.com') LIMIT 1[0m
+  [1m[35mSQL (24.4ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-11 07:02:01.006227"], ["email", "dasfas@fdas.com"], ["name", "sole"], ["password_digest", "$2a$10$Jz0HilNdp2qDmwqqLNo4MuYQIcT5beeXaUtPEivsgTqInrNPzB5gO"], ["updated_at", "2014-06-11 07:02:01.006227"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'dasfas@fdas.com' LIMIT 1
