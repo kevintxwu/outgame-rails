@@ -25,3 +25,7 @@
 
 /config/database.yml
 /config/environment_variables.rb
+
+/log
+
+/tmp
