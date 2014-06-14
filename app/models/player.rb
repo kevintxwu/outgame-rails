@@ -1,3 +1,2 @@
-class Player < ActiveRecord::Base
-  has_one :account
+class Player < User 
 end

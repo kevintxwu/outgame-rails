@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608221402) do
+ActiveRecord::Schema.define(version: 20140612022510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts_events", id: false, force: true do |t|
+    t.integer "account_id"
+    t.integer "event_id"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "date"
+    t.string   "type"
+    t.string   "bracket"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.string   "event_type"
+  end
+
+  create_table "players", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -25,5 +50,10 @@ ActiveRecord::Schema.define(version: 20140608221402) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+
+  create_table "users_events", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+  end
 
 end
