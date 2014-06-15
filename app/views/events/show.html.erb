@@ -1,0 +1,52 @@
+<h1 class="notification"> <%=@event.name %> <span class="orange"> Information </span></h1>
+<div class="event-management">
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Name</td>
+      <td><%=@event.name %></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Date</td>
+      <td><%=@event.date %></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Event Type</td>
+      <td><%=@event.event_type %></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Bracket</td>
+      <td><%=@event.bracket %></td>
+    </tr>
+    <tr style="height: 150px">
+      <td style="width: 150px;">Description</td>
+      <td><%=@event.description %></td>
+    </tr>
+  </table>
+</div>
+<div class="menu">
+  <div class="title"> Menu </div>
+  <a class="tab" href=<%=edit_event_path(@event)%>>
+    <img src="<%= image_path('pen.svg') %>"/>
+    <span> Edit Info </span>
+  </a>
+  <a class="tab" href="/mockup-event-checkin"> 
+    <img src="<%= image_path('person.svg') %>"/>
+    <span> Check In </span>
+  </a>
+  <a class="tab" href="/mockup-event-brackets"> 
+    <img src="<%= image_path('trophy.svg') %>"/>
+    <span> Brackets </span>
+  </a>
+  <!--<a class="tab" href="#"> 
+    <img src="<%= image_path('money.svg') %>"/>
+    <span> Rewards </span>
+  </a>-->
+  <a class="tab" href="/mockup-event-summary">
+    <img src="<%= image_path('stats.svg') %>"/>
+    <span> Summary </span>
+  </a>
+</div>

@@ -1,0 +1,12 @@
+<class="notification"> Your <span class="orange"> Upcoming Events </span> </h1>
+
+<% @events.each do |event| %>
+<div class="event">
+  <img src="<%= image_path(event.image) %>"/>
+  <h1> <%= shorten_str(event.name,18) %> </h1>
+  <p> <%= event.type %> </p>
+  <p class="description"> <%= shorten_str(event.description,70) %> </p>
+  <img class="date" src="<%= image_path('date.svg') %>"/><span> <%= event.date %> </span>
+  <%= link_to "Manage", event_path(event) %>
+</div>
+<% end %>

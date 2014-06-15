@@ -25,6 +25,7 @@
 
 /config/database.yml
 /config/environment_variables.rb
+/config/secrets.yml
 
 /log
 
