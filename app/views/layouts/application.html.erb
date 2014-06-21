@@ -12,9 +12,9 @@
 <nav>
   <a class="tab" href=<%= new_event_path%>><img src="<%= image_path('add.svg') %>"/></a>
   <div class="divider"></div>
-  <a class="tab" href="/mockup-events"><img src="<%= image_path('list.svg') %>"/></a>
+  <a class="tab" href=<%= events_path%>><img src="<%= image_path('list.svg') %>"/></a>
   <div class="divider"></div>
-  <span> Welcome, <a class="link" href="/mockup-login"> Games of Berkeley </a></span>
+  <span> Welcome, <a class="link" href="<%= events_path%>"> Games of Berkeley </a></span>
 </nav>
 <%= yield %>
 </body>
