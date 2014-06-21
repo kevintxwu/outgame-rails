@@ -1,0 +1,15 @@
+<div id="login-bg">
+  <div class="wrap">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      <div class="avatar">
+        <img src="<%= image_path('avatar.png') %>"/>
+      </div>
+      <%= f.text_field :email, placeholder: "Email", id: "login-top" %>
+      <div class="bar">
+        <i></i>
+      </div>
+      <%= f.password_field :email, placeholder: "Password", id: "login-bottom" %>
+      <%= f.submit "Sign in" %>
+    <% end %>
+  </div>
+</div>
