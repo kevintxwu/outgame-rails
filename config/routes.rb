@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  
+
   resources 'events'
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new',  via: 'get'
 
   get 'template/index', :path => 'template'
