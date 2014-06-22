@@ -1,6 +1,5 @@
 class RemoveAccounts < ActiveRecord::Migration
-  def up 
-    drop_table :accounts 
+  def up
     drop_table :accounts_events
   end
 

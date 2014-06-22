@@ -1,56 +1,24 @@
+<script>
+$(function() {
+  $( "#dialog" ).dialog({
+    autoOpen: false,
+  });
+
+  $( ".result" ).click(function() {
+    $( "#dialog" ).dialog( "open" );
+  });
+});
+</script>
+<div id="dialog" title="Match Result">
+  <p>Who won the match?</p>
+  <button class="left-button"> Player 1 </button>
+  <button class="center-button"> Player 2 </button>
+  <button class="right-button"> Tie </button>
+</div>
 <h1 class="notification"> Non-elimination Tournament <span class="orange"> Brackets </span></h1>
 <div class="event-management">
   <div class="third left-most history">
     <!--<h1> Round 1 </h1>-->
-    <div class="bracket">
-      <div class="top winner"> 
-        <span> Player 1 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 2 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 3 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-      <div class="bottom winner"> 
-        <span> Player 4 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 5 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-      <div class="bottom winner"> 
-        <span> Player 6 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 7 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-      <div class="bottom winner"> 
-        <span> Player 8 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="by tie">
-        <span> Player 9 </span>
-        <input type="text" placeholder="0" value="T"/>
-      </div>
-    </div>
-  </div>
-  <div class="third history">
-    <!--<h1> Round 2 </h1>-->
     <div class="bracket">
       <div class="top winner"> 
         <span> Player 1 </span>
@@ -99,53 +67,54 @@
     </div>
   </div>
   <div class="third">
-    <!--<h1> Round 3 </h1>-->
     <div class="bracket">
-      <div class="top winner"> 
+      <div class="top"> 
         <span> Player 1 </span>
-        <input type="text" placeholder="0" value="W"/>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
       <div class="bottom"> 
-        <span> Player 9 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-    </div>
-    <div class="bracket winner">
-      <div class="top tie"> 
-        <span> Player 3 </span>
-        <input type="text" placeholder="0" value="T"/>
-      </div>
-      <div class="bottom tie"> 
-        <span> Player 8 </span>
-        <input type="text" placeholder="0" value="T"/>
+        <span> Player 2 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
     </div>
     <div class="bracket">
-      <div class="top "> 
-        <span> Player 5 </span>
-        <input type="text" placeholder="0" value="L"/>
+      <div class="top"> 
+        <span> Player 3 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
-      <div class="bottom winner"> 
-        <span> Player 2 </span>
-        <input type="text" placeholder="0" value="W"/>
+      <div class="bottom"> 
+        <span> Player 4 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
+      </div>
+    </div>
+    <div class="bracket">
+      <div class="top"> 
+        <span> Player 5 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
+      </div>
+      <div class="bottom"> 
+        <span> Player 6 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
     </div>
     <div class="bracket">
       <div class="top"> 
         <span> Player 7 </span>
-        <input type="text" placeholder="0" value="L"/>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
-      <div class="bottom winner"> 
-        <span> Player 4 </span>
-        <input type="text" placeholder="0" value="W"/>
+      <div class="bottom"> 
+        <span> Player 8 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
     </div>
     <div class="bracket">
-      <div class="by tie">
-        <span> Player 6 </span>
-        <input type="text" placeholder="0" value="T"/>
+      <div class="by">
+        <span> Player 9 </span>
+        <input class="result" type="text" placeholder="?" readonly/>
       </div>
     </div>
+  </div>
+  <div class="third">
   </div>
 </div>
 <div class="menu">
