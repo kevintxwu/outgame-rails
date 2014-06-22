@@ -1,11 +1,12 @@
 class Match
   include ActiveModel::Model
-  attr_accessor :rounds, :team_1, :team_2, :bye, :event, :player_scores
+  attr_accessor :rounds, :team_1, :team_2, :bye, :event, :player_scores, :round_num
 
   #teams are designated with numerals 0,1
 
   def initialize(attributes={})
     super
+    @round_num = 0
     @rounds = []
     @offset = -1 #used for matching up teams, incremented every round inc. the first
     #also determines which team member to switch out for bye.
@@ -45,9 +46,12 @@ class Match
 
   end
 
-  def advance_round(, )
+  def advance_round()
     #create new games for every player pairing
     offset_index = (@offset % team_1.length) + 1
+
+    #advance round number
+    @round_num += 1
 
     #arrange for bye to be switched with offset indexed player
     team_switch = [@team_1, @team_2]
@@ -57,21 +61,20 @@ class Match
     bye_team[offset_index] = temp
 
     games = []
-    new_round = Round.new
+    new_round = Round.new(round_number: @round_num)
     @team_1.length do |t|
       game = Game.new(player_1: @team_1[t], player_2: @team_2[offset_index], 
 	       round_number: round_num) 
       offset_index += 1
-      games << game
+      new_round.games << game
     end
 
     #add round to match
     @rounds << new_round
-
   end
 
   #match is over if every team_list is empty but one
   def is_over?() 
-    return 
+    return false #currently hard-coded for non-elimination
   end
 end
