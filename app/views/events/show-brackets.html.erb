@@ -15,57 +15,42 @@ $(function() {
   <button class="center-button"> Player 2 </button>
   <button class="right-button"> Tie </button>
 </div>
-<h1 class="notification">Non-Elimination Tournament<span class="orange"> Brackets </span></h1>
+<h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
 <div class="event-management">
   <div class="third left-most history">
-    <!--<h1> Round 1 </h1>-->
+    <%@prev_rounds.each do |p|%>
+      p.games.each do |g|
     <div class="bracket">
-      <div class="top winner"> 
-        <span> Player 1 </span>
+	if !g.is_winner(g.player_1)
+          <div class="top"> 
+	else
+          <div class="top winner"> 
+	end
+	<span><%=g.player_1.name%> </span>
+	if g.is_winner(g.player_1)
         <input type="text" placeholder="0" value="W"/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 4 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 9 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-      <div class="bottom winner"> 
-        <span> Player 3 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top winner"> 
-        <span> Player 5 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 8 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top winner"> 
-        <span> Player 7 </span>
-        <input type="text" placeholder="0" value="W"/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 6 </span>
-        <input type="text" placeholder="0" value="L"/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="by tie">
-        <span> Player 2 </span>
+	else if g.has_tie
         <input type="text" placeholder="0" value="T"/>
+	else
+        <input type="text" placeholder="0" value="L"/>
+	end
+      </div>
+      <div class="bottom"> 
+	if !g.is_winner(g.player_2)
+          <div class="bottom"> 
+	else
+          <div class="bottom winner"> 
+	end
+	<span><%=g.player_2.name%> </span>
+	if g.is_winner(g.player_2)
+        <input type="text" placeholder="0" value="W"/>
+	else if g.has_tie
+        <input type="text" placeholder="0" value="T"/>
+	else
+        <input type="text" placeholder="0" value="L"/>
+	end
       </div>
     </div>
-  </div>
   <div class="third">
     <div class="bracket">
       <div class="top"> 
