@@ -14,7 +14,9 @@
   <div class="divider"></div>
   <a class="tab" href=<%= events_path%>><img src="<%= image_path('list.svg') %>"/></a>
   <div class="divider"></div>
-  <span> Welcome, <a class="link" href="<%= events_path%>"> Games of Berkeley </a></span>
+  <% if current_user %>
+    <span> Welcome, <a class="link" href="<%= events_path%>"> <%= current_user.name %> </a></span>
+    <% end %>
 </nav>
 <%= yield %>
 </body>
