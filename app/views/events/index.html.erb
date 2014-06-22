@@ -1,7 +1,7 @@
 <h1 class="notification"> Your <span class="orange"> Upcoming Events </span> </h1>
 <% @events.each do |event| %>
 <div class="event">
-  <img src="<%= image_path(event.image) %>"/>
+  <img src="<%= image_path('netrunner.jpg') %>"/>
   <h1> <%= shorten_str(event.name,18) %> </h1>
   <p> <%= event.type %> </p>
   <p class="description"> <%= shorten_str(event.description,70) %> </p>
