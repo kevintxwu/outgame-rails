@@ -12,7 +12,7 @@
 </head>
 <body>
 <nav>
-  <a class="tab" href="mockup-login"><img src="<%= image_path('exit.svg') %>"/></a>
+  <%= link_to(image_tag('exit.svg'), signout_path, class: 'tab', method: 'delete')%>
   <div class="divider"></div>
   <a class="tab" href=<%= new_event_path%>><img src="<%= image_path('add.svg') %>"/></a>
   <div class="divider"></div>
