@@ -23,7 +23,7 @@
     </tr>
     <tr style="height: 150px">
       <td style="width: 150px;">Description</td>
-      <td><%=@event.description %></td>
+      <td><textarea type="text"><%=@event.description %></textarea></td>
     </tr>
   </table>
 </div>
@@ -33,11 +33,11 @@
     <img src="<%= image_path('pen.svg') %>"/>
     <span> Edit Info </span>
   </a>
-  <a class="tab" href="/mockup-event-checkin"> 
+  <a class="tab" href="#"> 
     <img src="<%= image_path('person.svg') %>"/>
     <span> Check In </span>
   </a>
-  <a class="tab" href="/mockup-event-brackets"> 
+  <a class="tab" href="#"> 
     <img src="<%= image_path('trophy.svg') %>"/>
     <span> Brackets </span>
   </a>
@@ -45,7 +45,7 @@
     <img src="<%= image_path('money.svg') %>"/>
     <span> Rewards </span>
   </a>-->
-  <a class="tab" href="/mockup-event-summary">
+  <a class="tab" href="#">
     <img src="<%= image_path('stats.svg') %>"/>
     <span> Summary </span>
   </a>
