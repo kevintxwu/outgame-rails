@@ -1,23 +1,34 @@
-class Game
-  include ActiveModel::Model
-  attr_accessor :player_1, :player_2, :winner, :has_tie, :p1_letter, :p2_letter
+class Game < ActiveRecord::Base
+  belongs_to :round
+  has_many :players
 
+  #p_1 (player_1) is top player, p_2 (player_2) is bottom
+  #TODO: default player to winner if no other player given?
+
+=begin
   def initialize(attributes = {})
-    @winner = ''
-    @has_tie = false
-    @p1_letter = '?'
-    @p2_letter = '?'
+    @winner = attributes[:winner] 
+    @p_1 = attributes[:p_1]
+    @p_2 = attributes[:p_2]
+    #TODO: introduce this check!
+    #assert ([@p_1, @p_2, nil].include? @winner)
+    #  'winner must be a player in the match or nil'
+  end
+=end
+
+  def get_box_styling(player)
+    position = (player == @player_1) ? 'top' : 'bottom'
+    winner = (player == @winner) ? ' winner' : (tie? ? ' tie' : '')
+    return position + winner 
   end
 
-  def result_classname(player)
+  def get_result(player)
+    return @player == @winner ? 'W' :  
+      (@player_2 == @winner ? 'L' : 'T')
   end
 
-  def result_letter(player)
+  def tie?
+    return @winner == nil
   end
-
-  def is_winner(player)
-    return player == winner && !@has_tie
-  end
-
 
 end

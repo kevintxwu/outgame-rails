@@ -1,8 +1,7 @@
-class Round
-  include ActiveModel::Model
-  attr_accessor :player_1, :player_2, :round_number, :games
+class Round < ActiveRecord::Base
+  belongs_to :bracket
+  has_many :games
 
-  def initialize(attributes= {})
-    @games = []
+  def get_style()
   end
 end

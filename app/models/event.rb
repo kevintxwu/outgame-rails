@@ -1,6 +1,10 @@
 class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
-  attr_accessor :prev_rounds, :team_1, :team_2, :bye, :event, :player_scores, :round_num, :curr_round
+  serialize :teams, Hash
+  serialize :byes, Hash
+  serialize :scores, Hash
+
+=begin
 
   def initialize(attributes={})
     super
@@ -18,8 +22,12 @@ class Event < ActiveRecord::Base
     end
   end
 
+=end
+
   def setup_match
-    #must be at least two players
+    #there must be at least two players
+    
+    players = users
     assert(players.length >= 2,
       ['Event must have at least two players'])
  
@@ -45,6 +53,7 @@ class Event < ActiveRecord::Base
     #store last round
     if !curr_round == nil
       @prev_rounds << @curr_round
+    end
  
     #arrange for bye to be switched with offset indexed player
     team_switch = [@team_1, @team_2]
