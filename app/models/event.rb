@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
+  has_many :rounds
   serialize :teams, Hash
   serialize :scores, Hash
 
@@ -54,10 +55,11 @@ class Event < ActiveRecord::Base
     if rounds.last
       rounds.last.active = false
       rounds.last.save!
-      @byes = rounds.last.byes 
+      #@byes = rounds.last.byes 
     end
  
-    #switch bye with offset indexed player
+    #switch bye with first player in team
+=begin
     if @byes
       bye = @byes.first #assuming only one bye for now. format [player,team#]
       team_switch = [@team_1, @team_2]
@@ -68,8 +70,9 @@ class Event < ActiveRecord::Base
       teams
       hash.delete_if
     end
+=end
  
-    curr_round = Round.new(round_number: @round_num, active: true, byes: @byes)
+    curr_round = Round.new(round_number: @round_num, active: true)# byes: @byes)
     @team_1.zip(@team_1).each do |p1,p2| #teams should be same size!
       game = Game.new(player_1: p1, player_2: p2) #winner is set later
       curr_round.games << game

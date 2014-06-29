@@ -20,17 +20,21 @@ class Game < ActiveRecord::Base
     #ONLY WORKS FOR TWO PLAYERS!
     p_1,p_2 = players
     position = (player == p_1) ? 'top' : 'bottom'
-    winner = (player == @winner) ? ' winner' : (tie? ? ' tie' : '')
-    return position + winner 
+    win = player == winner(p_1,p_2) ? ' winner' : (tie? ? ' tie' : '')
+    return position + win
   end
 
   def get_result(player)
-    return @player == @winner ? 'W' :  
+    return pp1_win? ? 'W' :  
       (@player_2 == @winner ? 'L' : 'T')
   end
 
   def tie?
-    return @winner == nil
+    return (p1_win && p2_win) || (!p1_win && !p2_win)
+  end
+
+  def winner(p_1,p_2)
+    return tie? ? nil : (p1_win? ? p_1 : p_2)
   end
 
 end

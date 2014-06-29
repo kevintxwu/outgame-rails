@@ -26,9 +26,9 @@ $(function() {
 	    <div class=<%=g.get_2p_styling(p)%>> 
 	      <span><%=p.name%></span>
 	      <%if p == g.players.first%>
-		<%=f.checkbox :p1_win, disabled: !r.active?> 
+		<%=f.checkbox :p1_win, disabled: !r.active?%> 
 	      <%else%>
-		<%=f.checkbox :p2_win, disabled: !r.active?> 
+		<%=f.checkbox :p2_win, disabled: !r.active?%> 
 	      <%end%>
 	    </div>
 	  </div>

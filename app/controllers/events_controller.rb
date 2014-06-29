@@ -22,12 +22,13 @@ class EventsController < ApplicationController
   def show_brackets
     @event = Event.find params[:id]
     @rounds = @event.rounds
+    render 'show-brackets'
   end
 
   def new_round
     @event = Event.find params[:id]
     @event.generate_round
-    render 'show_brackets'
+    redirect_to bracket_path 
   end
 
   def edit

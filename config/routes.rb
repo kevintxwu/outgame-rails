@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   resources 'events'
   resources :users
+  get 'events/:id/bracket' => 'events#show_brackets', as: :brackets
   match '/signup', to: 'users#new',  via: 'get'
 
   get 'template/index', :path => 'template'
