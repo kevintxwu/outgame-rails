@@ -5,6 +5,7 @@ class CreateRound < ActiveRecord::Migration
       t.integer :event_id
       t.boolean :active
       t.integer :round_number
+      t.text :byes
       t.timestamps
     end
     t.add_index :event_id

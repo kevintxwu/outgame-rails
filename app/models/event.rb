@@ -1,73 +1,81 @@
 class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
   serialize :teams, Hash
-  serialize :byes, Hash
   serialize :scores, Hash
 
-=begin
-
-  def initialize(attributes={})
-    super
-    @round_num = 0
-    @prev_rounds = []
-    @curr_round = nil
-    @offset = -1 #used for matching up teams, incremented every round inc. the first
-    #also determines which team member to switch out for bye.
-    @bye = [] #first index is team, second is player name
-    @player_scores = Hash.new
-    @players = self.users.to_ary
-    #TODO: move scores out of hash.
-    @players.each do |p|
-      @player_scores[p.name] = 0 #check syntax, need player name for lookup
-    end
-  end
-
-=end
+  #THE FOLLOWING IS FOR TWO TEAM NON-ELIM ONLY
 
   def setup_match
     #there must be at least two players
+
+    players = users.select { |u| u.type = 'player' }
     
-    players = users
     assert(players.length >= 2,
       ['Event must have at least two players'])
  
     players.shuffle!
-
+ 
     if players.length % 2 > 0 #there is a bye, assign it to random team
       index = rand(1)
-      @bye[0] = index
-      @bye[1] = players.pop
+      byes = {players.pop => index}
     end
- 
-    @team_size = players.length/2 #must be even
- 
-    @team_1 = players.pop(@team_size)
-    @team_2 = players #remaining players
+
+    team_size = players.length/2 #must be even
+    players.each_with_index do |p,i|
+      teams[p] = i < team_size? 1 : 2
+    end
   end
 
-  def new_round
-    #advance offset and round number 
-    offset_index = (@offset % team_1.length) + 1
-    @round_num += 1
+  def rotate_hash(hash,num) 
+    hash.replace(hash.to_a.rotate(num).to_h)
+  end
 
-    #store last round
-    if !curr_round == nil
-      @prev_rounds << @curr_round
+  def generate_round
+    if rounds.length == 0:
+      setup_match
+    end
+
+    t_1 = teams.select { |k,v| v == 1 }
+    t_2 = teams.select { |k,v| v == 2 }
+    rotate_hash(t_1,1)
+    teams = t_1.merge t_2
+    @team_1 = t_1.keys
+    @team_2 = t_2.keys
+    #keep in mind hash order is preserved.
+    #This operation is to offset team 1
+    #in order to match players for byes.
+
+    #advance round num
+    r_num = rounds.empty? 1 : rounds.last.round_num + 1
+
+    #set previous round as history
+    if rounds.last
+      rounds.last.active? = false
+      rounds.last.save!
     end
  
-    #arrange for bye to be switched with offset indexed player
-    team_switch = [@team_1, @team_2]
-    bye_team = team_switch[@bye[0]] 
-    temp = @bye[1]
-    @bye[1] = bye_team[offset]
-    bye_team[offset_index] = temp
- 
-    @curr_round = Round.new(round_number: @round_num)
-    @team_1.length do |t|
-      game = Game.new(player_1: @team_1[t], player_2: @team_2[offset_index])
-      new_round.games << game
-      offset_index += 1
+    #switch bye with offset indexed player
+    if !byes.empty? 
+      @bye = byes.first #assuming only one bye for now. format [player,team#]
+      team_switch = [@team_1, @team_2]
+      bye_team = team_switch[byes[0]] 
+      temp = @bye
+      @bye[1] = bye_team[offset]
+      bye_team[offset_index] = temp
+      teams
+      hash.delete_if
     end
+ 
+    curr_round = Round.new(round_number: @round_num, active: true)
+    @team_1.zip(@team_1) do |p1,p2| #teams should be same size!
+      game = Game.new(player_1: p1, player_2: p2) #winner is set later
+      curr_round.games << game
+      game.save!
+    end
+
+    rounds << curr_round
+    rounds.save!
+    save!
   end
 
 end

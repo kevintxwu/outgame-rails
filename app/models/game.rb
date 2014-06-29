@@ -16,8 +16,10 @@ class Game < ActiveRecord::Base
   end
 =end
 
-  def get_box_styling(player)
-    position = (player == @player_1) ? 'top' : 'bottom'
+  def get_2p_styling(player)
+    #ONLY WORKS FOR TWO PLAYERS!
+    p_1,p_2 = players
+    position = (player == p_1) ? 'top' : 'bottom'
     winner = (player == @winner) ? ' winner' : (tie? ? ' tie' : '')
     return position + winner 
   end

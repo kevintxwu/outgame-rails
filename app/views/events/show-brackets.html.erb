@@ -15,93 +15,37 @@ $(function() {
   <button class="center-button"> Player 2 </button>
   <button class="right-button"> Tie </button>
 </div>
+
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
 <div class="event-management">
-  <div class="third left-most history">
-    <%@prev_rounds.each do |p|%>
-      p.games.each do |g|
-    <div class="bracket">
-	if !g.is_winner(g.player_1)
-          <div class="top"> 
-	else
-          <div class="top winner"> 
-	end
-	<span><%=g.player_1.name%> </span>
-	if g.is_winner(g.player_1)
-        <input type="text" placeholder="0" value="W"/>
-	else if g.has_tie
-        <input type="text" placeholder="0" value="T"/>
-	else
-        <input type="text" placeholder="0" value="L"/>
-	end
+  <%@rounds.each do |r|%>
+    <div class=<%=r.get_style()%>>
+      <%r.games.each do |g|%>
+	<%g.players.each do |p|%>
+	  <div class="bracket">
+	    <div class=<%=g.get_2p_styling(p)%>> 
+	      <span><%=p.name%></span>
+	      <%if p == g.players.first%>
+		<%=f.checkbox :p1_win, disabled: !r.active?> 
+	      <%else%>
+		<%=f.checkbox :p2_win, disabled: !r.active?> 
+	      <%end%>
+	    </div>
+	  </div>
+	<%end%>
+    <%end%>
+    <%r.byes.each do |name,team|%>
+      <div class="bracket">
+        <div class="by tie">
+	  <span><%=name%> </span>
+	  <input type="text" placeholder="0" value="T"/>
+        </div>
       </div>
-      <div class="bottom"> 
-	if !g.is_winner(g.player_2)
-          <div class="bottom"> 
-	else
-          <div class="bottom winner"> 
-	end
-	<span><%=g.player_2.name%> </span>
-	if g.is_winner(g.player_2)
-        <input type="text" placeholder="0" value="W"/>
-	else if g.has_tie
-        <input type="text" placeholder="0" value="T"/>
-	else
-        <input type="text" placeholder="0" value="L"/>
-	end
-      </div>
-    </div>
-  <div class="third">
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 1 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 2 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 3 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 4 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 5 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 6 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="top"> 
-        <span> Player 7 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-      <div class="bottom"> 
-        <span> Player 8 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-    </div>
-    <div class="bracket">
-      <div class="by">
-        <span> Player 9 </span>
-        <input class="result" type="text" placeholder="?" readonly/>
-      </div>
-    </div>
+    <%end%>
   </div>
-  <div class="third">
-  </div>
+  <%end%>
 </div>
+
 <div class="menu">
   <div class="title"> Menu </div>
   <a class="tab" href="/mockup-event-info">

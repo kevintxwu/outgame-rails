@@ -18,7 +18,18 @@ class EventsController < ApplicationController
   def show
     @event = Event.find params[:id]
   end
-  
+
+  def show_brackets
+    @event = Event.find params[:id]
+    @rounds = @event.rounds
+  end
+
+  def new_round
+    @event = Event.find params[:id]
+    @event.generate_round
+    render 'show-brackets'
+  end
+
   def edit
     @event = Event.find params[:id]
   end
