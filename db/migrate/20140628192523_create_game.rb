@@ -7,6 +7,6 @@ class CreateGame < ActiveRecord::Migration
       t.belongs_to :round
       t.timestamps
     end
-    t.add_index :games, :round_id
+    add_index :games, :round_id
   end
 end

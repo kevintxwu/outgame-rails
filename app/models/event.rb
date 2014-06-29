@@ -17,12 +17,14 @@ class Event < ActiveRecord::Base
  
     if players.length % 2 > 0 #there is a bye, assign it to random team
       index = rand(1)
-      byes = {players.pop => index}
+      @byes = {players.pop => index}
+    else
+      @byes = nil
     end
 
     team_size = players.length/2 #must be even
     players.each_with_index do |p,i|
-      teams[p] = i < team_size? 1 : 2
+      teams[p] = i <= team_size ? 1 : 2
     end
   end
 
@@ -31,7 +33,7 @@ class Event < ActiveRecord::Base
   end
 
   def generate_round
-    if rounds.length == 0:
+    if rounds.length == 0
       setup_match
     end
 
@@ -46,28 +48,29 @@ class Event < ActiveRecord::Base
     #in order to match players for byes.
 
     #advance round num
-    r_num = rounds.empty? 1 : rounds.last.round_num + 1
+    r_num = rounds.empty? ? 1 : rounds.last.round_num + 1
 
     #set previous round as history
     if rounds.last
-      rounds.last.active? = false
+      rounds.last.active = false
       rounds.last.save!
+      @byes = rounds.last.byes 
     end
  
     #switch bye with offset indexed player
-    if !byes.empty? 
-      @bye = byes.first #assuming only one bye for now. format [player,team#]
+    if @byes
+      bye = @byes.first #assuming only one bye for now. format [player,team#]
       team_switch = [@team_1, @team_2]
-      bye_team = team_switch[byes[0]] 
-      temp = @bye
-      @bye[1] = bye_team[offset]
+      bye_team = team_switch[@byes[0]] 
+      temp = @byes
+      @byes[1] = bye_team[offset]
       bye_team[offset_index] = temp
       teams
       hash.delete_if
     end
  
-    curr_round = Round.new(round_number: @round_num, active: true)
-    @team_1.zip(@team_1) do |p1,p2| #teams should be same size!
+    curr_round = Round.new(round_number: @round_num, active: true, byes: @byes)
+    @team_1.zip(@team_1).each do |p1,p2| #teams should be same size!
       game = Game.new(player_1: p1, player_2: p2) #winner is set later
       curr_round.games << game
       game.save!

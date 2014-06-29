@@ -8,6 +8,6 @@ class CreateRound < ActiveRecord::Migration
       t.text :byes
       t.timestamps
     end
-    t.add_index :event_id
+    add_index :rounds, :event_id
   end
 end
