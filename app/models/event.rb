@@ -10,10 +10,10 @@ class Event < ActiveRecord::Base
     #there must be at least two players
 
     players = users.select { |u| u.type = 'player' }
-    
+=begin    
     assert(players.length >= 2,
       ['Event must have at least two players'])
- 
+=end 
     players.shuffle!
  
     if players.length % 2 > 0 #there is a bye, assign it to random team
@@ -74,7 +74,9 @@ class Event < ActiveRecord::Base
  
     curr_round = Round.new(round_number: @round_num, active: true)# byes: @byes)
     @team_1.zip(@team_1).each do |p1,p2| #teams should be same size!
-      game = Game.new(player_1: p1, player_2: p2) #winner is set later
+      game = Game.new #winner is set later
+      game.contestants << p1
+      game.contestants << p2
       curr_round.games << game
       game.save!
     end

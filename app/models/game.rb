@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   belongs_to :round
-  has_many :players
+  has_many :contestants
 
   #p_1 (player_1) is top player, p_2 (player_2) is bottom
   #TODO: default player to winner if no other player given?
@@ -16,15 +16,16 @@ class Game < ActiveRecord::Base
   end
 =end
 
-  def get_2p_styling(player)
+  def get_2p_styling(pl)
     #ONLY WORKS FOR TWO PLAYERS!
-    p_1,p_2 = players
-    position = (player == p_1) ? 'top' : 'bottom'
-    win = player == winner(p_1,p_2) ? ' winner' : (tie? ? ' tie' : '')
+    p_1,p_2 = contestants
+    position = (pl == p_1) ? 'top' : 'bottom'
+    win = pl == winner(p_1,p_2) ? ' winner' : (tie? ? ' tie' : '')
     return position + win
   end
 
-  def get_result(player)
+  #FIX!
+  def get_result(pl)
     return pp1_win? ? 'W' :  
       (@player_2 == @winner ? 'L' : 'T')
   end

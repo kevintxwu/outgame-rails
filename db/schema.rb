@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140629062205) do
+ActiveRecord::Schema.define(version: 20140630054255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,12 @@ ActiveRecord::Schema.define(version: 20140629062205) do
   add_index "events_users", ["user_id"], name: "index_events_users_on_user_id", using: :btree
 
   create_table "games", force: true do |t|
-    t.boolean  "p1_win",     default: false
-    t.boolean  "p2_win",     default: false
+    t.boolean  "p1_win",      default: false
+    t.boolean  "p2_win",      default: false
     t.integer  "round_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "contestants"
   end
 
   add_index "games", ["round_id"], name: "index_games_on_round_id", using: :btree

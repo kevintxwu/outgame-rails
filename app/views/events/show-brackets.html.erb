@@ -21,17 +21,20 @@ $(function() {
   <%@rounds.each do |r|%>
     <div class=<%=r.get_style()%>>
       <%r.games.each do |g|%>
-	<%g.players.each do |p|%>
+	<%= form_for g do |f| %>
+	<%g.contestants.each do |p|%>
 	  <div class="bracket">
 	    <div class=<%=g.get_2p_styling(p)%>> 
 	      <span><%=p.name%></span>
-	      <%if p == g.players.first%>
+	      <%if p == g.contestants.first%>
 		<%=f.checkbox :p1_win, disabled: !r.active?%> 
 	      <%else%>
 		<%=f.checkbox :p2_win, disabled: !r.active?%> 
 	      <%end%>
 	    </div>
 	  </div>
+	  <%= f.submit 'Submit', :class => "submit" %>
+	  <%end%>
 	<%end%>
     <%end%>
     <%r.byes.each do |name,team|%>
@@ -44,6 +47,10 @@ $(function() {
     <%end%>
   </div>
   <%end%>
+</div>
+
+<div class="menu">
+  <%= link_to "New Round", new_round_path, :class => 'tab'%>
 </div>
 
 <div class="menu">
