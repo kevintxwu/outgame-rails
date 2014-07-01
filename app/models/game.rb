@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   belongs_to :round
-  has_many :contestants
+  serialize :contestants, Array
 
   #p_1 (player_1) is top player, p_2 (player_2) is bottom
   #TODO: default player to winner if no other player given?

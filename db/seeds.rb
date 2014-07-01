@@ -22,7 +22,17 @@ def create_events
 
 end
 
+def create_users(event)
+  event.users = 1.upto(10).map do |n|
+    Player.create!  name: 'Player #{n}',
+                    password: 'password',
+                    email: "player#{n}@outgame.org"
+  end
+end
+
+
 create_events
+create_users(Event.last)
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #

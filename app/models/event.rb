@@ -49,7 +49,8 @@ class Event < ActiveRecord::Base
     #in order to match players for byes.
 
     #advance round num
-    r_num = rounds.empty? ? 1 : rounds.last.round_num + 1
+    puts rounds.length
+    r_num = rounds.empty? ? 1 : rounds.last.round_number + 1
 
     #set previous round as history
     if rounds.last
@@ -72,9 +73,10 @@ class Event < ActiveRecord::Base
     end
 =end
  
-    curr_round = Round.new(round_number: @round_num, active: true)# byes: @byes)
+    curr_round = Round.new(round_number: r_num, active: true)# byes: @byes)
     @team_1.zip(@team_1).each do |p1,p2| #teams should be same size!
       game = Game.new #winner is set later
+      game.contestants = [] #initialize the right way
       game.contestants << p1
       game.contestants << p2
       curr_round.games << game
@@ -82,7 +84,6 @@ class Event < ActiveRecord::Base
     end
 
     rounds << curr_round
-    rounds.save!
     save!
   end
 
