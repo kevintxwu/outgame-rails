@@ -27,14 +27,14 @@ $(function() {
 	    <div class=<%=g.get_2p_styling(p)%>> 
 	      <span><%=p.name%></span>
 	      <%if p == g.contestants.first%>
-		<%=f.checkbox :p1_win, disabled: !r.active?%> 
+		<%=f.check_box :p1_win, disabled: !r.active?%> 
 	      <%else%>
-		<%=f.checkbox :p2_win, disabled: !r.active?%> 
+		<%=f.check_box :p2_win, disabled: !r.active?%> 
 	      <%end%>
 	    </div>
 	  </div>
-	  <%= f.submit 'Submit', :class => "submit" %>
 	  <%end%>
+	  <%= f.submit 'Submit', :class => "submit" %>
 	<%end%>
     <%end%>
     <%r.byes.each do |name,team|%>

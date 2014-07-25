@@ -24,7 +24,7 @@ end
 
 def create_users(event)
   event.users = 1.upto(10).map do |n|
-    Player.create!  name: 'Player #{n}',
+    Player.create!  name: "Player #{n}",
                     password: 'password',
                     email: "player#{n}@outgame.org"
   end

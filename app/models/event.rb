@@ -25,7 +25,7 @@ class Event < ActiveRecord::Base
 
     team_size = players.length/2 #must be even
     players.each_with_index do |p,i|
-      teams[p] = i <= team_size ? 1 : 2
+      teams[p] = i < team_size ? 1 : 2
     end
   end
 
@@ -73,10 +73,12 @@ class Event < ActiveRecord::Base
     end
 =end
  
+puts 'HELLO'
     curr_round = Round.new(round_number: r_num, active: true)# byes: @byes)
-    @team_1.zip(@team_1).each do |p1,p2| #teams should be same size!
+    @team_1.zip(@team_2).each do |p1,p2| #teams should be same size!
       game = Game.new #winner is set later
-      game.contestants = [] #initialize the right way
+      puts p1.name
+      puts p2.name
       game.contestants << p1
       game.contestants << p2
       curr_round.games << game
