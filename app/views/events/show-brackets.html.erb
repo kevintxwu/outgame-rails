@@ -17,36 +17,24 @@ $(function() {
 </div>
 
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
+
 <div class="event-management">
-  <%@rounds.each do |r|%>
-    <div class=<%=r.get_style()%>>
-      <%r.games.each do |g|%>
-	<%= form_for g do |f| %>
-	<%g.contestants.each do |p|%>
-	  <div class="bracket">
-	    <div class=<%=g.get_2p_styling(p)%>> 
-	      <span><%=p.name%></span>
-	      <%if p == g.contestants.first%>
-		<%=f.check_box :p1_win, disabled: !r.active?%> 
-	      <%else%>
-		<%=f.check_box :p2_win, disabled: !r.active?%> 
-	      <%end%>
-	    </div>
-	  </div>
-	  <%end%>
-	  <%= f.submit 'Submit', :class => "submit" %>
-	<%end%>
-    <%end%>
-    <%r.byes.each do |name,team|%>
-      <div class="bracket">
-        <div class="by tie">
-	  <span><%=name%> </span>
-	  <input type="text" placeholder="0" value="T"/>
-        </div>
-      </div>
-    <%end%>
-  </div>
-  <%end%>
+  <% if @new_round %>  
+    <p><%=@new_round.games.count%><p>
+    <%= form_for @event, url: { :action => :update } do |f| %>
+      <%= f.text_field :name %>
+      <%= f.fields_for :rounds do |round| %>
+        <%= round.number_field :round_number %>
+        <%= round.fields_for :games do |game_form| %>
+            <%= game_form.radio_button :p1_win, true%>
+        <% end %>
+      <% end %>
+      <%= f.submit %>
+    <% end %>
+  <%else%>
+    <p>HELLOOOOO<p>
+  <% end %>
+
 </div>
 
 <div class="menu">

@@ -1,6 +1,7 @@
 class Round < ActiveRecord::Base
   belongs_to :event
   has_many :games
+  accepts_nested_attributes_for :games, :update_only => true
   serialize :byes, Hash
 
   def get_style()

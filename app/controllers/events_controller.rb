@@ -21,7 +21,7 @@ class EventsController < ApplicationController
 
   def show_brackets
     @event = Event.find params[:id]
-    @rounds = @event.rounds
+    @new_round = @event.rounds.last
     render 'show-brackets'
   end
 
@@ -29,8 +29,14 @@ class EventsController < ApplicationController
     @event = Event.find params[:id]
     @event.generate_round
     @rounds = @event.rounds
+    @event.save!
+    @new_round = @event.rounds.last
     render 'show-brackets'
     #redirect_to 'bracket_path'
+  end
+
+  def create_round
+    @event = Event.find params [:id]
   end
 
   def edit
@@ -63,7 +69,7 @@ class EventsController < ApplicationController
 private
 
 def event_params
-  params.require(:event).permit(:name, :date, :bracket, :event_type, :description)
+  params.require(:event).permit(:id, :name, :date, :bracket, :event_type, :description, rounds_attributes: [:id, :round_number, :byes, games_attributes: [:id, :p1_win, :p2_win]])
 end
 
 end
