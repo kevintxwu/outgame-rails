@@ -17,44 +17,44 @@ $(function() {
 </div>
 
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
-
 <div class="event-management">
-<p>Check a box to declare a winner. Check both boxes or
-   leave both blank to declare a tie.<p>
-  <% if @new_round %>  
-    <%= form_for @event, url: { :action => :update } do |f| %>
-      <%= f.fields_for :rounds do |round_form| %>
-	<div class="<%=round_form.object.get_style()%>">
-	  <%= round_form.fields_for :games do |game_form| %>
-	    <div class="bracket">
-	    <%game_form.object.contestants.each do |p|%>
-                <div class="<%=game_form.object.get_2p_styling(p)%>">
-		  <span><%=p.name%></span>
-                  <%if p == game_form.object.contestants.first%>
-                    <%= game_form.check_box :p1_win%>
-                  <%else%>
-                    <%= game_form.check_box :p2_win%>
-                  <%end%>
-                </div>
-            <% end %>
-            </div>
-	  <% end %>
+  <%@rounds.each do |r|%>
+    <div class=<%=r.get_style()%>>
+      <%r.games.each do |g|%>
+	<%= form_for g do |f| %>
+	<%g.contestants.each do |p|%>
+	  <div class="bracket">
+	    <div class=<%=g.get_2p_styling(p)%>> 
+	      <span><%=p.name%></span>
+	      <%if p == g.contestants.first%>
+		<%=f.checkbox :p1_win, disabled: !r.active?%> 
+	      <%else%>
+		<%=f.checkbox :p2_win, disabled: !r.active?%> 
+	      <%end%>
+	    </div>
+	  </div>
+	  <%= f.submit 'Submit', :class => "submit" %>
+	  <%end%>
+	<%end%>
+    <%end%>
+    <%r.byes.each do |name,team|%>
+      <div class="bracket">
+        <div class="by tie">
+	  <span><%=name%> </span>
+	  <input type="text" placeholder="0" value="T"/>
         </div>
-      <% end %>
-      <%= f.submit 'Submit Changes', :class => "submit" %>
-    <% end %>
-  <%else%>
-    <p>Press 'New Round' to generate a new round<p>
-  <% end %>
+      </div>
+    <%end%>
+  </div>
+  <%end%>
+</div>
 
+<div class="menu">
+  <%= link_to "New Round", new_round_path, :class => 'tab'%>
 </div>
 
 <div class="menu">
   <div class="title"> Menu </div>
-  <a class="tab" href=<%=new_round_path%>>
-    <img src="<%= image_path('pen.svg') %>"/>
-    <span> New Round </span>
-  </a>
   <a class="tab" href="/mockup-event-info">
     <img src="<%= image_path('pen.svg') %>"/>
     <span> Edit Info </span>
