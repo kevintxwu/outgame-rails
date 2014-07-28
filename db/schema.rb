@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630054255) do
+ActiveRecord::Schema.define(version: 20140727063528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140630054255) do
     t.string   "event_type"
     t.string   "bracket_type"
     t.text     "teams"
+    t.text     "scores"
   end
 
   create_table "events_users", id: false, force: true do |t|

@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources 'events'
   resources :users
   resources 'games'
-  get 'events/:id/bracket' => 'events#show_brackets', as: :brackets
+  get 'events/:id/bracket' => 'events#show_bracket', as: :bracket
   get 'events/:id/new_round' => 'events#new_round', as: :new_round
+  patch 'events/:id/bracket' =>  'events#update_bracket', as: :update_bracket
   match '/signup', to: 'users#new',  via: 'get'
 
   get 'template/index', :path => 'template'

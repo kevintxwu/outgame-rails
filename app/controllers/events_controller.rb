@@ -19,19 +19,22 @@ class EventsController < ApplicationController
     @event = Event.find params[:id]
   end
 
-  def show_brackets
+  def show_bracket
     @event = Event.find params[:id]
     @new_round = @event.rounds.last
-    render 'show-brackets'
+    render 'show-bracket'
   end
 
   def new_round
     @event = Event.find params[:id]
-    @event.generate_round
-    @rounds = @event.rounds
-    @event.save!
-    @new_round = @event.rounds.last
-    render 'show-brackets'
+    # last round can't be active!
+    if @event.rounds.last == nil or !@event.rounds.last.active
+      @event.generate_round
+      @rounds = @event.rounds
+      @event.save!
+      @new_round = @event.rounds.last
+    end
+    render 'show-bracket'
     #redirect_to 'bracket_path'
   end
 
@@ -49,9 +52,22 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find params[:id]
+    @event.calculate_scores
     if @event.update_attributes event_params
       flash[:success] = 'Event successfully updated!'
       redirect_to @event
+    else
+      render 'show'
+    end
+  end
+
+  def update_bracket
+    @event = Event.find params[:id]
+    @event.calculate_scores
+    if @event.update_attributes event_params
+      flash[:success] = 'Event successfully updated!'
+      render 'show-bracket'
+      #redirect_to show_bracket
     else
       render 'show'
     end
@@ -69,7 +85,7 @@ class EventsController < ApplicationController
 private
 
 def event_params
-  params.require(:event).permit(:id, :name, :date, :bracket, :event_type, :description, rounds_attributes: [:id, :round_number, :byes, games_attributes: [:id, :p1_win, :p2_win]])
+  params.require(:event).permit(:id, :name, :date, :bracket, :event_type, :description, rounds_attributes: [:id, :round_number, :active, :byes, games_attributes: [:id, :p1_win, :p2_win]])
 end
 
 end

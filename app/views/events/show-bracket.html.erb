@@ -21,9 +21,10 @@ $(function() {
 <div class="event-management">
 <p>Check a box to declare a winner. Check both boxes or
    leave both blank to declare a tie.<p>
-  <% if @new_round %>  
-    <%= form_for @event, url: { :action => :update } do |f| %>
+  <% if !@event.rounds.empty?%>  
+    <%= form_for @event, url: { :action => :update_bracket } do |f| %>
       <%= f.fields_for :rounds do |round_form| %>
+	<%= round_form.hidden_field :active, :value => false%>
 	<div class="<%=round_form.object.get_style()%>">
 	  <%= round_form.fields_for :games do |game_form| %>
 	    <div class="bracket">
@@ -47,6 +48,25 @@ $(function() {
     <p>Press 'New Round' to generate a new round<p>
   <% end %>
 
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+    </tr>
+    <%@event.scores.each do |p,s_arr|%>
+      <tr>
+	<td><%=p.name%></td>
+	<td><%=s_arr[0]%></td>
+	<td><%=s_arr[1]%></td>
+	<td><%=s_arr[2]%></td>
+      </tr>
+    <%end%>
+  </table>
 </div>
 
 <div class="menu">

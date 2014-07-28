@@ -13,6 +13,4 @@ class Round < ActiveRecord::Base
   def get_player_from_name(name)
     return Player.find_by name: name
   end
-
-
 end
