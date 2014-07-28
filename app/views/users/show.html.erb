@@ -1,1 +1,19 @@
-<%= @user.name %> <%= @user.email %>
+ 
+
+<h1 class="notification"> Hello <span class="orange"> <%= @user.name %> </span></h1>
+<div class="form">
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Name</td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td style="width: 150px;">Email</td>
+      <td><%= @user.email %></td>
+    </tr>
+  </table>
+</div>

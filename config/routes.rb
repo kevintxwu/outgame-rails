@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  
+
   resources 'events'
   resources :users
   resources 'games'
   get 'events/:id/bracket' => 'events#show_bracket', as: :bracket
   get 'events/:id/new_round' => 'events#new_round', as: :new_round
   patch 'events/:id/bracket' =>  'events#update_bracket', as: :update_bracket
+  resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new',  via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'get', via: 'delete'
 
   get 'template/index', :path => 'template'
   get 'template/new'
@@ -24,7 +27,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'events#index'#'mockup#index' 
+  root 'sessions#new'#'mockup#index' 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
