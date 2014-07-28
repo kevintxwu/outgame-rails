@@ -35,7 +35,6 @@ class EventsController < ApplicationController
       @new_round = @event.rounds.last
     end
     render 'show-bracket'
-    #redirect_to 'bracket_path'
   end
 
   def create_round
@@ -52,7 +51,6 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find params[:id]
-    @event.calculate_scores
     if @event.update_attributes event_params
       flash[:success] = 'Event successfully updated!'
       redirect_to @event
@@ -63,11 +61,10 @@ class EventsController < ApplicationController
 
   def update_bracket
     @event = Event.find params[:id]
-    @event.calculate_scores
     if @event.update_attributes event_params
       flash[:success] = 'Event successfully updated!'
+      @event.calculate_scores
       render 'show-bracket'
-      #redirect_to show_bracket
     else
       render 'show'
     end
