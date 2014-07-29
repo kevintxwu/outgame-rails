@@ -19,9 +19,12 @@ $(function() {
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
 
 <div class="event-management">
+  <% if @new_round_disabled %>
+    <p>There must be at least two players added to
+       the event before the match can start.<p>
+  <% elsif !@event.rounds.empty?%>  
 <p>Check a box to declare a winner. Check both boxes or
    leave both blank to declare a tie.<p>
-  <% if !@event.rounds.empty?%>  
     <%= form_for @event, url: { :action => :update_bracket } do |f| %>
       <%= f.fields_for :rounds do |round_form| %>
 	<%= round_form.hidden_field :active, :value => false%>
@@ -73,10 +76,17 @@ $(function() {
 
 <div class="menu">
   <div class="title"> Menu </div>
+<% if @new_round_disabled %>
+  <a class="tab">
+    <img src="<%= image_path('pen.svg') %>"/>
+    <span><strike>New Round</strike></span>
+  </a>
+<%else%>
   <a class="tab" href=<%=new_round_path%>>
     <img src="<%= image_path('pen.svg') %>"/>
     <span> New Round </span>
   </a>
+<%end%>
   <a class="tab" href="/mockup-event-info">
     <img src="<%= image_path('pen.svg') %>"/>
     <span> Edit Info </span>

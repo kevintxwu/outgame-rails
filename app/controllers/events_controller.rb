@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  helper_method :shorten_str
+  helper_method :shorten_str, :num_players
   def index
     @events = Event.all
   end
@@ -22,6 +22,7 @@ class EventsController < ApplicationController
   def show_bracket
     @event = Event.find params[:id]
     @new_round = @event.rounds.last
+    @new_round_disabled = num_players(@event) < 2
     render 'show-bracket'
   end
 
@@ -77,6 +78,11 @@ class EventsController < ApplicationController
   
   def shorten_str(str,len)
     str.length > len ? str[0..len] + '...' : str[0..-1] 
+  end
+
+  def num_players(event)
+    p = event.users.select { |u| u.type = 'Player' }
+    return p.count
   end
 
 private

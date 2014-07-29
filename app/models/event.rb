@@ -28,7 +28,7 @@ class Event < ActiveRecord::Base
     # there must be at least two players.
     # TODO: this needs an assert statement.
 
-    players = users.select { |u| u.type = 'player' }
+    players = users.select { |u| u.type = 'Player' }
     players.shuffle!
 
     self.scores = Hash.new
@@ -210,6 +210,10 @@ class Event < ActiveRecord::Base
 	if g.tie?
 	  self.scores[p1][2] += 1
 	  self.scores[p2][2] += 1
+	  # may as well update the tie while we're here
+	  g.p1_win = false
+	  g.p2_win = false
+	  g.save!
 	elsif g.p1_win?
 	  self.scores[p1][1] += 1
 	  self.scores[p2][0] += 1
