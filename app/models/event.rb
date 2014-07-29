@@ -162,28 +162,6 @@ class Event < ActiveRecord::Base
     end
     rounds << curr_round
     save!
-
-=begin
-    teams_copy = Marshal.load(Marshal.dump(self.teams))
-    count = players.count
-    while count > 1 do
-      teams_copy.each do |match| # note that p1,p2 are indices
-	p1 = match[0]
-	p2 = match[1]
-	if !pool.include? p1 and !pool.include? p2
-	  new_game = make_and_return_game(players[p1],players[p2])
-	  curr_round.games << new_game
-	  curr_round.save!
-	  pool << p1
-	  pool << p2
-	  self.teams.delete(match) # take pair out of table
-	  count -= 2
-	end
-      end
-    end
-    rounds << curr_round
-    save!
-=end
   end
 
   def fits_in_pool(pool,pair)
