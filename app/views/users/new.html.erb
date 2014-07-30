@@ -1,3 +1,11 @@
+<% if flash[:error] %>
+  <div class="action-notification">
+    <img src="/assets/notification.svg">
+    <span><%= flash[:error] %></span>
+  </div>
+  <div class="action-notification-spacer">
+  </div>
+<% end %>
 <h1 class="notification"> Create A <span class="orange"> New User </span></h1>
 <div class="form">
   <%= form_for(@user) do |f| %>
