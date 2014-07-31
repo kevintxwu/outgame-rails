@@ -26,6 +26,7 @@ class EventsController < ApplicationController
     render 'show-bracket'
   end
 
+=begin
   def new_round
     @event = Event.find params[:id]
     # last round can't be active!
@@ -37,6 +38,7 @@ class EventsController < ApplicationController
     end
     render 'show-bracket'
   end
+=end
 
   def create_round
     @event = Event.find params [:id]
@@ -62,12 +64,21 @@ class EventsController < ApplicationController
 
   def update_bracket
     @event = Event.find params[:id]
-    if @event.update_attributes event_params
-      flash[:success] = 'Event successfully updated!'
-      @event.calculate_scores
+    # last round can't be active!
+    if @event.rounds.last == nil or !@event.rounds.last.active
+      @event.generate_round
+      @rounds = @event.rounds
+      @event.save!
+      @new_round = @event.rounds.last
       render 'show-bracket'
     else
-      render 'show'
+      if @event.update_attributes event_params
+        flash[:success] = 'Event successfully updated!'
+        @event.calculate_scores
+        render 'show-bracket'
+      else
+        render 'show'
+      end
     end
   end
 

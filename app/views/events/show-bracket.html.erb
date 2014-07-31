@@ -5,9 +5,11 @@ $(function() {
   });
 
   $( ".result" ).click(function() {
-    $( "#dialog" ).dialog( "open" );
+    console.log('here');
+    $('#event_form').submit();
   });
 });
+
 </script>
 <div id="dialog" title="Match Result">
   <p>Who won the match?</p>
@@ -16,6 +18,8 @@ $(function() {
   <button class="right-button"> Tie </button>
 </div>
 
+<%= form_for @event, url: { :action => :update_bracket }, 
+  :html => {:id => 'event_form' }  do |f| %>
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
 
 <div class="event-management">
@@ -25,7 +29,6 @@ $(function() {
   <% elsif !@event.rounds.empty?%>  
 <p>Check a box to declare a winner. Check both boxes or
    leave both blank to declare a tie.<p>
-    <%= form_for @event, url: { :action => :update_bracket } do |f| %>
       <%= f.fields_for :rounds do |round_form| %>
 	<%= round_form.hidden_field :active, :value => false%>
 	<div class="<%=round_form.object.get_style()%>">
@@ -45,8 +48,6 @@ $(function() {
 	  <% end %>
         </div>
       <% end %>
-      <%= f.submit 'Submit Changes', :class => "submit" %>
-    <% end %>
   <%else%>
     <p>Press 'New Round' to generate a new round<p>
   <% end %>
@@ -82,10 +83,14 @@ $(function() {
     <span><strike>New Round</strike></span>
   </a>
 <%else%>
-  <a class="tab" href=<%=new_round_path%>>
-    <img src="<%= image_path('pen.svg') %>"/>
-    <span> New Round </span>
-  </a>
+  <a class="result tab">
+ <img src="<%= image_path('pen.svg') %>"/>
+  <% if @event.rounds.empty? %>
+    <span> Start Match </span>
+  <%else%>
+    <span> Advance Match </span>
+  <%end%>
+</a>
 <%end%>
   <a class="tab" href="/mockup-event-info">
     <img src="<%= image_path('pen.svg') %>"/>
@@ -112,3 +117,4 @@ $(function() {
     <span> Delete </span>
   </a>
 </div>
+<%end%>
