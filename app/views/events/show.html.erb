@@ -26,12 +26,13 @@
       <td><textarea type="text"><%=@event.description %></textarea></td>
     </tr>
   </table>
+  <a href=<%=edit_event_path(@event)%>><button class="submit">Edit</button></a>
 </div>
 <div class="menu">
   <div class="title"> Menu </div>
-  <a class="tab" href=<%=edit_event_path(@event)%>>
+  <a class="tab" href=<%=event_path(@event)%>>
     <img src="<%= image_path('pen.svg') %>"/>
-    <span> Edit Info </span>
+    <span> Information </span>
   </a>
   <a class="tab" href="#"> 
     <img src="<%= image_path('person.svg') %>"/>
