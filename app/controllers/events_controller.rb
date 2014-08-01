@@ -62,6 +62,15 @@ class EventsController < ApplicationController
     end
   end
 
+  def save_event
+    @event = Event.find params[:id]
+    if @event.update_attributes event_params
+      render 'show-bracket'
+    else
+      render 'show' #for error checks
+    end
+  end
+
   def update_bracket
     @event = Event.find params[:id]
     # last round can't be active!

@@ -5,8 +5,11 @@ $(function() {
   });
 
   $( ".result" ).click(function() {
-    console.log('here');
     $('#event_form').submit();
+  });
+
+  $( ".checkbox" ).click(function() {
+    document.eform.action ="<%= url_for(:controller => 'events', :action => 'save_event') %>"
   });
 });
 
@@ -19,7 +22,7 @@ $(function() {
 </div>
 
 <%= form_for @event, url: { :action => :update_bracket }, 
-  :html => {:id => 'event_form' }  do |f| %>
+  :html => {:id => 'event_form', :name => 'eform' }  do |f| %>
 <h1 class="notification"><%=@event.name%><span class="orange"> Brackets </span></h1>
 
 <div class="event-management">
@@ -34,14 +37,16 @@ $(function() {
 	<div class="<%=round_form.object.get_style()%>">
 	  <%= round_form.fields_for :games do |game_form| %>
 	    <div class="bracket">
-	    <%game_form.object.contestants.each do |p|%>
+	      <%game_form.object.contestants.each do |p|%>
                 <div class="<%=game_form.object.get_2p_styling(p)%>">
 		  <span><%=p.name%></span>
+	          <div class="checkbox">
                   <%if p == game_form.object.contestants.first%>
                     <%= game_form.check_box :p1_win%>
                   <%else%>
                     <%= game_form.check_box :p2_win%>
                   <%end%>
+	        </div>
                 </div>
             <% end %>
             </div>
