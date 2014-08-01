@@ -8,8 +8,10 @@ $(function() {
     $('#event_form').submit();
   });
 
-  $( ".checkbox" ).click(function() {
+  $( ".checkbox input" ).click(function() {
+    console.log("MEH");
     document.eform.action ="<%= url_for(:controller => 'events', :action => 'save_event') %>"
+    eform.submit();
   });
 });
 
