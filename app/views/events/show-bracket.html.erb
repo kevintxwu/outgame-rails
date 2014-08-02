@@ -65,8 +65,8 @@ $(function() {
   <table>
     <tr>
       <th>Player</th>
-      <th>Wins</th>
       <th>Losses</th>
+      <th>Wins</th>
       <th>Ties</th>
     </tr>
     <%@event.scores.each do |p,s_arr|%>
@@ -97,6 +97,10 @@ $(function() {
     <span> Advance Match </span>
   <%end%>
 </a>
+<a class="tab" href="/mockup-event-brackets"> 
+  <img src="<%= image_path('trophy.svg') %>"/>
+  <span> Undo Round </span>
+</a>
 <%end%>
   <a class="tab" href="/mockup-event-info">
     <img src="<%= image_path('pen.svg') %>"/>
@@ -105,10 +109,6 @@ $(function() {
   <a class="tab" href="/mockup-event-checkin"> 
     <img src="<%= image_path('person.svg') %>"/>
     <span> Check In </span>
-  </a>
-  <a class="tab" href="/mockup-event-brackets"> 
-    <img src="<%= image_path('trophy.svg') %>"/>
-    <span> Brackets </span>
   </a>
   <!--<a class="tab" href="#"> 
     <img src="<%= image_path('money.svg') %>"/>

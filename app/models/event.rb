@@ -39,7 +39,7 @@ class Event < ActiveRecord::Base
   end
 
   def generate_round
-    if rounds.length == 0
+    if rounds.empty?
       setup_match
     end
 
@@ -49,7 +49,7 @@ class Event < ActiveRecord::Base
     curr_round = Round.new(round_number: r_num, active: true)
 
     # order players from lowest to highest score 
-    self.scores.sort_by { |p, s| s[1] }
+    self.scores = Hash[self.scores.sort_by { |p, s| s[1] }]
     players = Array.new
     self.scores.each do |p,s|
       players << p
@@ -107,7 +107,6 @@ class Event < ActiveRecord::Base
       r.games.each do |g|
 	p1 = g.contestants[0]
 	p2 = g.contestants[1]
-	puts p1
 	if g.tie?
 	  self.scores[p1][2] += 1
 	  self.scores[p2][2] += 1
