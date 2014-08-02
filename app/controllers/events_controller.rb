@@ -96,6 +96,14 @@ class EventsController < ApplicationController
     Event.find(params[:id]).destroy
     redirect_to events_path 
   end
+
+  def undo_round
+    @event = Event.find(params[:id])
+    if !@event.rounds.empty?
+      @event.rounds.last.destroy
+      render 'show-bracket'
+    end
+  end
   
   def shorten_str(str,len)
     str.length > len ? str[0..len] + '...' : str[0..-1] 

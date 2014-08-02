@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'events/:id/bracket' => 'events#show_bracket', as: :bracket
   get 'events/:id/new_round' => 'events#new_round', as: :new_round
   patch 'events/:id/bracket' =>  'events#update_bracket', as: :update_bracket
+  delete 'events/:id/undo_round' => 'events#undo_round', as: :undo_round
   patch 'events/:id/save_event' => 'events#save_event', as: :save_event
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new',  via: 'get'

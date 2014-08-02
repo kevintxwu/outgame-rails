@@ -1,6 +1,6 @@
 class Round < ActiveRecord::Base
   belongs_to :event
-  has_many :games
+  has_many :games, dependent: :destroy
   accepts_nested_attributes_for :games, :update_only => true
   serialize :byes, Hash
 
