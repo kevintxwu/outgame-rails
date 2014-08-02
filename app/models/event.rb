@@ -36,22 +36,6 @@ class Event < ActiveRecord::Base
     players.each do |p|
       self.scores[p] = [0,0,0] #Losses, Wins, Ties
     end
-
-    generate_pairs(players.count)
-
-  end
-
-
-  def generate_pairs(num_players)
-    # create pair table of player indices
-    # (generates every possible match
-    # combination)
-    self.teams = Array.new
-    for i in (0 .. num_players-1) do
-      for j in (i+1 .. num_players-1) do
-	self.teams << [i,j]
-      end
-    end
   end
 
   def generate_round
@@ -64,14 +48,12 @@ class Event < ActiveRecord::Base
 
     curr_round = Round.new(round_number: r_num, active: true)
 
-    # create ordered player array from scores hash
+    # order players from lowest to highest score 
+    self.scores.sort_by { |p, s| s[1] }
     players = Array.new
     self.scores.each do |p,s|
       players << p
     end
-
-    # create player pool to check matchups against
-    pool = Array.new
 
     # use round num for bye (convert to index).
     # needed only if bye is present
@@ -88,84 +70,24 @@ class Event < ActiveRecord::Base
       rounds.last.active = false
       rounds.last.save!
     end
- 
-    #use pair table (teams) to generate matchups
-    if self.teams.empty?
-    # restart for now.
-    # we should probably end the match at this point.
-      generate_pairs(players.count)     
+
+    # create matchups
+    # TODO: account for byes
+    matchups = Array.new
+    keys = self.scores.keys
+    i = 0
+    for i in 0..(players.count/2-1) do
+      matchups << [keys[2*i], keys[2*i+1]] 
     end
 
-    # the problem of finding the right pairs to
-    # guarantee that the maximum number of players
-    # will be in a round is similar to finding
-    # the longest sequence in a DAG, where 
-    # edges go from left to right between 
-    # nodes that have space in the pool and
-    # nodes that fill that space.
-   
-    node_prevs = []
-    node_pools = []
-    for i in 1..teams.count
-      node_pools << []
-    end
-    max = 0 
-
-    teams.each.with_index do |pair,index|
-      max = 0 
-      prev_index = -1
-      for i in (0 .. index)  
-      # pool size is score for node
-	if node_pools[i].size >= max and fits_in_pool(node_pools[i],pair)
-	  max = node_pools[i].size
-	  prev_index = i 
-	end 
-      end 
-      # use prev index == -1 as marker to start of sequence
-      node_prevs[index] = prev_index
-      if prev_index == -1
-	node_pools[index] = [] + pair
-      else
-	node_pools[index] = node_pools[prev_index] + pair
-      end 
-    end 
-
-    max = 0 
-    last_index = 0 
-    matchups = []
-    node_pools.each.with_index do |p, index|
-      if p.size > max 
-	max = p.size
-	last_index = index
-      end 
-    end 
-
-    prev_index = last_index
-    done = false
-    while true do
-      matchups << teams[prev_index]
-      prev_index = node_prevs[prev_index]
-      if done == true
-	  break
-      end
-      if prev_index == node_prevs[prev_index]
-	  done = true
-      end
-    end
-
-    # make games and delete matchups from pair table.
+    # make games 
     matchups.each do |p1,p2|
-      self.teams.delete([p1,p2])
-      new_game = make_and_return_game(players[p1],players[p2])
+      new_game = make_and_return_game(p1,p2)
       curr_round.games << new_game
       curr_round.save!
     end
     rounds << curr_round
     save!
-  end
-
-  def fits_in_pool(pool,pair)
-    return (!pool.include? pair[0] and !pool.include? pair[1])
   end
 
   def make_and_return_game(player_1,player_2)
@@ -185,6 +107,7 @@ class Event < ActiveRecord::Base
       r.games.each do |g|
 	p1 = g.contestants[0]
 	p2 = g.contestants[1]
+	puts p1
 	if g.tie?
 	  self.scores[p1][2] += 1
 	  self.scores[p2][2] += 1
@@ -200,6 +123,7 @@ class Event < ActiveRecord::Base
 	  self.scores[p2][1] += 1
 	end
       end 
+      save!
    end
   end
 
