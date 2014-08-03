@@ -36,6 +36,7 @@ $(function() {
       <%= f.fields_for :rounds do |round_form| %>
 	<%= round_form.hidden_field :active, :value => false%>
 	<div class="<%=round_form.object.get_style()%>">
+          <%round_form.object.games.order("id")%>
 	  <%= round_form.fields_for :games do |game_form| %>
 	    <div class="bracket">
 	      <%game_form.object.contestants.each do |p|%>

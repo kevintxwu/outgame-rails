@@ -104,6 +104,7 @@ class Event < ActiveRecord::Base
       self.scores[k] = [0,0,0]
     end
     rounds.each do |r|
+      r.games.order("id")
       r.games.each do |g|
 	p1 = g.contestants[0]
 	p2 = g.contestants[1]

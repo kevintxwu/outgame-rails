@@ -1,5 +1,6 @@
 class Round < ActiveRecord::Base
   belongs_to :event
+  default_scope { order "round_number desc" }
   has_many :games, dependent: :destroy
   accepts_nested_attributes_for :games, :update_only => true
   serialize :byes, Hash

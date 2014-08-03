@@ -1,5 +1,6 @@
 class Game < ActiveRecord::Base
   belongs_to :round
+  default_scope { order "id" }
   serialize :contestants, Array
 
   #p_1 (player_1) is top player, p_2 (player_2) is bottom

@@ -26,20 +26,6 @@ class EventsController < ApplicationController
     render 'show-bracket'
   end
 
-=begin
-  def new_round
-    @event = Event.find params[:id]
-    # last round can't be active!
-    if @event.rounds.last == nil or !@event.rounds.last.active
-      @event.generate_round
-      @rounds = @event.rounds
-      @event.save!
-      @new_round = @event.rounds.last
-    end
-    render 'show-bracket'
-  end
-=end
-
   def create_round
     @event = Event.find params [:id]
   end
