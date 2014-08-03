@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Outgame " + @user.name + "!"
       redirect_to root_path
     else
-      flash[:error] = @user.errors.full_messages
+      flash[:error] = @user.errors.full_messages[0]
       render 'new'
     end
   end

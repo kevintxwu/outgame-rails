@@ -29,6 +29,7 @@
         <span><%= flash[:error] %></span>
       </div>
       <div class="action-notification-spacer"></div>
+      <% flash.clear %>
     <% end %>
     <%= yield %>
   </body>
