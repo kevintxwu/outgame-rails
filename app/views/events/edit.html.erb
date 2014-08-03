@@ -1,4 +1,4 @@
-<h1 class="notification">Edit <%=@event.name%></span></h1>
+<h1 class="notification">Edit <span class="orange"><%=@event.name%></span></h1>
 <%= form_for @event do |f| %>
 <div class="form">
   <table>
@@ -26,7 +26,7 @@
         <%=f.select :bracket, options_for_select(%w[Non-Elimination])%>
       </td>
     </tr>
-    <tr style="height: 150px">
+    <tr style="height: 150px;">
       <td style="width: 150px;">Description</td>
       <td><%=f.text_area :description%></td>
     </tr>
@@ -34,7 +34,7 @@
 <%= f.submit 'Update Event', :class => "submit"%>
 <% end%>
 <div style="white-space:nowrap;">
-  <a href=<%=event_path(@event)%>href=<%=event_path(@event)%> data-confirm="Are you sure you want to delete this event?" data-method="delete"><button class="submit" style="background: #db4435; margin-left: 15px;">Delete</button></a>
+  <a href=<%=event_path(@event)%> data-confirm="Are you sure you want to delete this event?" data-method="delete"><button class="submit" style="background: #db4435; margin-left: 15px;">Delete</button></a>
   <a href=<%=event_path(@event)%>><button class="submit" style="background: #b3b3b3; margin-left: 15px;">Cancel</button></a>
   </div>
 </div>
