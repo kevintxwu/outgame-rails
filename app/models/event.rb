@@ -55,14 +55,12 @@ class Event < ActiveRecord::Base
       players << p
     end
 
-    # use round num for bye (convert to index).
-    # needed only if bye is present
-    # also, mod is used so this will reset
-    # after everyone has been out once.
+    # if bye is present
+    # account for bye 
     if players.count % 2 != 0
-      index = r_num % players.count
-      pool << index
-      curr_round.byes = { index => true }
+      spectator = find_bye 
+      curr_round.byes = { 0 => spectator }
+      players.delete spectator 
     end
 
     #set previous round as history
@@ -74,10 +72,9 @@ class Event < ActiveRecord::Base
     # create matchups
     # TODO: account for byes
     matchups = Array.new
-    keys = self.scores.keys
     i = 0
     for i in 0..(players.count/2-1) do
-      matchups << [keys[2*i], keys[2*i+1]] 
+      matchups << [players[2*i], players[2*i+1]] 
     end
 
     # make games 
@@ -125,6 +122,46 @@ class Event < ActiveRecord::Base
       end 
       save!
    end
+  end
+
+  def get_bottom_players
+    sorted = Hash[self.scores.sort_by { |p, s| s[1] }]
+    players = Array.new
+    if sorted.empty?
+      return Array.empty
+    end
+    wins = sorted[sorted.keys.first][1]
+    sorted.each do |k,v|
+      if v[1] == wins   
+	players << k
+	next
+      end
+      break
+    end
+    return players
+  end
+
+  # should be called BEFORE starting a new round!
+  def find_bye
+    if rounds.empty?
+      #return a random player
+      return users.select { |u| u.type="Player" }.sample
+    else
+      bottom_players = get_bottom_players
+      rounds.reverse_each do |r|
+	# TODO: there should be a clearer way to store/access this
+	player = r.byes[0]
+	if bottom_players.include? player
+	  if bottom_players.count == 1
+	    break
+	  end
+	  bottom_players.delete player 
+	end
+      end
+      # loop may not have completely reduced results,
+      # but in either case we can sample from them
+      return bottom_players.sample
+    end
   end
 
 end
